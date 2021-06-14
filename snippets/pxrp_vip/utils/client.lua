@@ -11,12 +11,11 @@ CreateThread(function()
             break
         end
     end
-end)
-
-CreateThread(function()
-    ESX.TriggerServerCallback('pxrp_vip:getVIPStatus', function(vip)
-        isVip = vip
-    end, GetPlayerServerId(PlayerId()), '1')
+    if ESX then    
+        ESX.TriggerServerCallback('pxrp_vip:getVIPStatus', function(vip)
+            isVip = vip
+        end, GetPlayerServerId(PlayerId()), '1')     
+    end        
 end)
 
 -- this will send information to server.
