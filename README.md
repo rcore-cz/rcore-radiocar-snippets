@@ -8,6 +8,7 @@
 locales
 - czech
 - english
+- danish - med0#4279
 
 ---
 
