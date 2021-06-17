@@ -8,6 +8,7 @@
 locales
 - czech
 - english
+- spanish - by EmiN.
 - danish - med0#4279
 
 ---
