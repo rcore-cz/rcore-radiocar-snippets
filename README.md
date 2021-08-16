@@ -12,12 +12,11 @@ locales
 ---
 
 Snippets 
-- esx_vip<br><br><br>
-
- - By Yixaoky
- - ghmattimysql
+- esx_vip
 
 ---
 
 API  
 - rcore_buyvehicle
+
+---

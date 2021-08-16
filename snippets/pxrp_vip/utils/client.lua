@@ -11,23 +11,12 @@ CreateThread(function()
             break
         end
     end
+    if ESX then    
+        ESX.TriggerServerCallback('pxrp_vip:getVIPStatus', function(vip)
+            isVip = vip
+        end, GetPlayerServerId(PlayerId()), '1')     
+    end        
 end)
-
-CreateThread(function()
-    ESX.TriggerServerCallback('pxrp_vip:getVIPStatus', function(vip)
-        isVip = vip
-    end, GetPlayerServerId(PlayerId()), '1')
-end)
-
--- this will send information to server.
-function CheckPlayerCar(vehicle)
-    if ESX then
-        local veh = ESX.Game.GetVehicleProperties(vehicle)
-        TriggerServerEvent("rcore_radiocar:openUI", veh.plate)
-    else
-        TriggerServerEvent("rcore_radiocar:openUI", GetVehicleNumberPlateText(vehicle))
-    end
-end
 
 -- if you want this script for... lets say like only vip, edit this function.
 function YourSpecialPermission()
